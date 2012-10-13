@@ -97,7 +97,7 @@ template = """
 </head>
 <body>
 <div class="bar">
-	<a href="http://qiita.com" class="logo"></a>
+	<a href="http://qiita.com" class="logo" target="_blank"></a>
 	<a href="" class="user" id="user_url" target="_blank">
 		<img class="avatar" src="#" id="user_avatar">
 		<span class="username" id="user_name"></span>
