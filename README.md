@@ -1,11 +1,8 @@
-# Qiita Blog Widget
+# Qiita Widget
 
 ![](https://raw.github.com/suin/qiita-widget/master/image.png)
 
-```html
-<a class="qiita-timeline" href="https://qiita.com/users/suin" data-qiita-username="suin">suinのtips</a>
-<script src="https://raw.github.com/suin/qiita-widget/master/script.js"></script>
-```
+→ [Qiita Widgetのコードを取得する](http://qiita-widget.suin.org/)
 
 ## 使い方
 
