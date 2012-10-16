@@ -33,7 +33,7 @@ class ItemRepository
 #
 class User
 	constructor: (user)->
-		@name = user.name
+		@name = user.url_name
 		@profileImageUrl = user.profile_image_url
 		@url = "http://qiita.com/users/#{@name}"
 
