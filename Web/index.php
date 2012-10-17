@@ -1,3 +1,6 @@
+<?php
+$scriptUrl = '//'.htmlspecialchars($_SERVER['HTTP_HOST']).'/widget.js';
+?>
 <!doctype html>
 <html>
 <head>
@@ -26,7 +29,7 @@
 
 				</div>
 				<pre id="code">&lt;a class=&quot;qiita-timeline&quot; href=&quot;https://qiita.com/users/{&#12518;&#12540;&#12470;&#21517;}&quot; data-qiita-username=&quot;{&#12518;&#12540;&#12470;&#21517;}&quot;&gt;{&#12518;&#12540;&#12470;&#21517;}&#12398;tips&lt;/a&gt;
-&lt;script src=&quot;https://raw.github.com/suin/qiita-widget/master/script.js&quot;&gt;&lt;/script&gt;</pre>
+&lt;script src=&quot;<?php echo $scriptUrl ?>&quot;&gt;&lt;/script&gt;</pre>
 
 				<div id="preview" style="margin: auto; width: 300px; "></div>
 				<div style="text-align: center; margin-top: 20px;">
@@ -48,7 +51,7 @@
 <script type="text/javascript">
 
 jQuery(function(){
-	var code = '<a class="qiita-timeline" href="https://qiita.com/users/__username__" data-qiita-username="__username__">__username__のtips</a><'+'script src="https://raw.github.com/suin/qiita-widget/master/script.js"><'+'/script>';
+	var code = '<a class="qiita-timeline" href="https://qiita.com/users/__username__" data-qiita-username="__username__">__username__のtips</a><'+'script src="<?php echo $scriptUrl ?>"><'+'/script>';
 	$('#get_code_button').click(function(){
 		var username = $('#username').val();
 		if ( username ) {
