@@ -86,6 +86,14 @@ setIframeHeight = (iframe) ->
 		if iframeWin.document.body
 			iframe.height = iframeWin.document.documentElement.scrollHeight or iframeWin.document.body.scrollHeight
 
+setInnerText = (element, text) ->
+	if typeof element.textContent != "undefined"
+		# For firefox
+		element.textContent = text
+	else
+		element.innerText = text
+
+
 template = """
 <!DOCTYPE html>
 <html lang="ja">
@@ -129,7 +137,7 @@ main = ->
 			doc.write(template)
 			doc.close()
 
-			doc.getElementById('user_name').innerHTML = username
+			setInnerText doc.getElementById('user_name'), username
 			itemsBlock = doc.getElementById('items')
 
 			# fetch data
@@ -143,7 +151,7 @@ main = ->
 					itemElement = document.createElement('div')
 					itemElement.setAttribute('class', 'item')
 					title = document.createElement('a')
-					title.innerText = item.title
+					setInnerText title, item.title
 					title.setAttribute('href', item.url)
 					title.setAttribute('class', 'title')
 					title.setAttribute('target', '_blank')
@@ -151,7 +159,7 @@ main = ->
 
 					for tag in item.tags
 						tagElement = document.createElement('a')
-						tagElement.innerText = tag.name
+						setInnerText tagElement, tag.name
 						tagElement.setAttribute('href', tag.url)
 						tagElement.setAttribute('class', 'tag')
 						tagElement.setAttribute('target', '_blank')
