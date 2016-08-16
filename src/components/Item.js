@@ -28,7 +28,7 @@ export default class Item extends React.Component {
       },
       item: {
         paddingLeft: 6,
-        flexGrow: 1
+        flex: 1
       },
       itemStatus: {
         fontSize: 12,
