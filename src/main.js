@@ -6,7 +6,7 @@ const WIDGET_SELECTOR = "[data-qiita-widget],.qiita-timeline"; // .qiita-timelin
 
 Array.prototype.forEach.call(document.querySelectorAll(WIDGET_SELECTOR), (element) => {
   const newElement = document.createElement("div");
-  const dataset = {...element.dataset};
+  const dataset = JSON.parse(JSON.stringify(element.dataset)); // Object.assignがSafariではうまくいかないため
   ReactDom.render(<Widget {...dataset} />, newElement);
   element.parentNode.replaceChild(newElement, element);
 });
