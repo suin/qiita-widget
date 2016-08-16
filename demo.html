@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <title>Qiita Widget Demo</title>
 </head>
-<body style="background: #eee">
-<h1>Qiita Widget Demo</h1>
-<a href="https://qiita.com/suin" data-qiita-widget data-username="suin">suinのQiita投稿</a>
+<body style="background: #79b74a">
+<h1 style="text-align: center; color: #fff">Qiita Widget Demo</h1>
+<div style="display: flex; justify-content: space-around; margin: 100px 100px">
+    <a href="https://qiita.com/suin"
+       data-qiita-widget
+       data-username="suin"
+       data-items="8"
+       data-width="400px"
+       data-height="720px">suinのQiita投稿</a>
+    <a href="https://qiita.com/tags/Ruby"
+       data-qiita-widget
+       data-tag="Ruby"
+       data-items="8"
+       data-width="400px"
+       data-height="720px">RubyのQiita投稿</a>
+</div>
 <script src="widget.js" defer></script>
 </body>
 </html>
