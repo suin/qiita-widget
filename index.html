@@ -1,1 +1,146 @@
-Hello world
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Qiita Widget">
+    <title>Qiita Widget</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        /* Space out content a bit */
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        /* Everything but the jumbotron gets side spacing for mobile first views */
+        .header,
+        .marketing,
+        .footer {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        /* Custom page header */
+        .header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        /* Make the masthead heading the same height as the navigation */
+        .header h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 40px;
+        }
+
+        /* Custom page footer */
+        .footer {
+            padding-top: 19px;
+            color: #777;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        /* Customize container */
+        /*@media (min-width: 768px) {*/
+            /*.container {*/
+                /*max-width: 730px;*/
+            /*}*/
+        /*}*/
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .jumbotron .btn {
+            padding: 14px 24px;
+            font-size: 21px;
+        }
+
+        /* Supporting marketing content */
+        .marketing {
+            margin: 40px 0;
+        }
+        .marketing p + h4 {
+            margin-top: 28px;
+        }
+
+        /* Responsive: Portrait tablets and up */
+        @media screen and (min-width: 768px) {
+            /* Remove the padding we set earlier */
+            .header,
+            .marketing,
+            .footer {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            /* Space out the masthead */
+            .header {
+                margin-bottom: 30px;
+            }
+            /* Remove the bottom border on the jumbotron for visual effect */
+            .jumbotron {
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <h3 class="text-success pull-left">Qiita Widget</h3>
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="https://github.com/suin/qiita-widget">GitHub</a></li>
+            </ul>
+        </nav>
+        <p class="navbar-text">Qiitaの投稿が埋め込めるブログパーツのデモ</p>
+    </div>
+
+    <h1>ユーザの投稿 (yaottiさんの新着投稿を表示する例)</h1>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <span data-qiita-widget data-username="yaotti"></span>
+        </div>
+        <div class="col-sm-8">
+            <h4>HTML</h4>
+            <pre>&lt;a href=&quot;http://qiita.com/yaotti&quot; data-qiita-widget data-username=&quot;yaotti&quot;&gt;yaotti&#12398;Qiita&#25237;&#31295;&lt;/a&gt;
+&lt;script src=&quot;https://suin.github.io/qiita-widget/widget.js&quot; defer&gt;&lt;/script&gt;</pre>
+        </div>
+    </div>
+
+    <h1>タグへの投稿 (Rubyタグへの新着投稿を表示する例)</h1>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <span data-qiita-widget data-tag="Ruby"></span>
+        </div>
+        <div class="col-sm-8">
+            <h4>HTML</h4>
+            <pre>&lt;a href=&quot;http://qiita.com/tags/Ruby&quot; data-qiita-widget data-tag=&quot;Ruby&quot;&gt;Ruby&#12398;Qiita&#25237;&#31295;&lt;/a&gt;
+&lt;script src=&quot;https://suin.github.io/qiita-widget/widget.js&quot; defer&gt;&lt;/script&gt;</pre>
+        </div>
+    </div>
+
+    <h1>カスタマイズ</h1>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <p>その他のカスタマイズについては<a href="https://github.com/suin/qiita-widget">README</a>をご覧ください。</p>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://suin.suin.io/qiita-widget/widget.js" defer></script>
+</body>
+</html>
