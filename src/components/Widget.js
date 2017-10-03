@@ -47,7 +47,7 @@ export default class Widget extends React.Component {
     if (this.state.query === null) {
       return;
     }
-    request(`https://qiita.com/api/v1/search?q=${encodeURIComponent(this.state.query)}&per_page=${this.props.items}`, (items) => {
+    request(`https://qiita.com/api/v2/items?query=${encodeURIComponent(this.state.query)}&per_page=${this.props.items}`, (items) => {
       this.setState({loaded: true, items});
     });
   }
